@@ -1,0 +1,33 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "sever": "webpack-dev-server --inline --hot"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martynaswiesciak/Recipes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martynaswiesciak/Recipes/issues"
+  },
+  "homepage": "https://github.com/martynaswiesciak/Recipes#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
