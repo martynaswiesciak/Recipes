@@ -29,5 +29,10 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.14",
+    "nodemon": "^2.0.1"
   }
 }
