@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "sever": "webpack-dev-server --inline --hot"
+    "server": "webpack-dev-server --inline --hot"
   },
   "browserslist": [
     "last 1 version",
