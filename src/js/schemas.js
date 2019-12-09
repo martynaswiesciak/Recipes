@@ -7,6 +7,12 @@ mongoose.connect('mongodb://localhost/recipes')
 
 // schemas
 const userSchema = new mongoose.Schema({
+    email: {
+        type: String,
+        required: true,
+        minlength: 3,
+        maxlength: 255,
+        trim: true },
     nick: { 
         type: String, 
         required: true,
@@ -15,13 +21,11 @@ const userSchema = new mongoose.Schema({
         trim: true },
     name: { 
         type: String, 
-        required: true,
         minlength: 3,
         maxlength: 255,
         trim: true },
     surname: { 
         type: String, 
-        required: true,
         minlength: 3,
         maxlength: 255,
         trim: true },
