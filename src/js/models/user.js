@@ -37,50 +37,8 @@ const userSchema = new mongoose.Schema({
         trim: true }
 });
 
-const recipeSchema = new mongoose.Schema({
-    title: { 
-        type: String, 
-        required: true,
-        minlength: 5,
-        maxlength: 255,
-        trim: true },
-    recipe: { 
-        type: String, 
-        required: true,
-        minlength: 5,
-        trim: true },
-    ingredients: {
-        type: [ String ],
-        required: true },
-        userId: String
-});
-
-const ingredientSchema = new mongoose.Schema({
-    name: { 
-        type: String, 
-        required: true,
-        minlength: 3,
-        maxlength: 255,
-        trim: true }
-});
-
-const daySchema = new mongoose.Schema({
-    ingredients: [ String ],
-    date: Date
-});
-
-const shoppingSchema = new mongoose.Schema({
-    day: Date,
-    ingredients: [ String ]
-});
-
-// models
 const User = mongoose.model('User', userSchema);
-const Recipe = mongoose.model('Recipe', recipeSchema);
-const Ingredient = mongoose.model('Ingredient', ingredientSchema);
-const Day = mongoose.model('Day', daySchema);
-const Schopping = mongoose.model('Shopping', shoppingSchema);
-
+exports.User = User;
 
 //////////// PRZYKŁADOWE FUNKCJE //////////////
 
