@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Joi = require('joi');
 
 // połączenie z bazą danych
 mongoose.connect('mongodb://localhost/recipes')  
@@ -14,5 +15,14 @@ const ingredientSchema = new mongoose.Schema({
         trim: true }
 });
 
+function validateIngredient(ingredient) {
+    const schema = {
+        name: Joi.string().min(3).max(255).required()
+    };
+
+    return Joi.validate(ingredient, schema);
+}
+
 const Ingredient = mongoose.model('Ingredient', ingredientSchema);
 exports.Ingredient = Ingredient;
+exports.validate = validateIngredient;

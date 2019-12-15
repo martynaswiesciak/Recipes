@@ -24,6 +24,7 @@ const recipeSchema = new mongoose.Schema({
         userId: String
 });
 
+// walidacja 
 function validateRecipe(recipe) {
     const schema = {
         title: Joi.string().min(5).max(50).required(),
@@ -36,3 +37,5 @@ function validateRecipe(recipe) {
 
 const Recipe = mongoose.model('Recipe', recipeSchema);
 exports.Recipe = Recipe;
+exports.validate = validateRecipe;
+
