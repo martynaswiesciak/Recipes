@@ -31,8 +31,13 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+<<<<<<< Updated upstream
     "express": "^4.17.1",
     "joi": "^14.3.1",
+=======
+    "config": "^3.2.4",
+    "jsonwebtoken": "^8.5.1",
+>>>>>>> Stashed changes
     "mongodb": "^3.3.5",
     "mongoose": "^5.7.14",
     "nodemon": "^2.0.1"
