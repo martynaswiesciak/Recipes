@@ -5,7 +5,7 @@ const User = require('user');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
-// router.post('/signup',(req,res,next) =>...)
+// router.post('/signup',(req,res,next) =>...)...
 
 router.post('/login',(req, res, next) => {
     User.find({ email: req.body.email})
