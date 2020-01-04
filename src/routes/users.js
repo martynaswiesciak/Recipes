@@ -1,4 +1,3 @@
-
 const bcrypt = require('bcrypt');
 const {User, validate} = require('../models/user');
 const mongoose = require('mongoose');
@@ -7,6 +6,7 @@ const router = express.Router();
 
 // user registration
 router.post('/', async (req, res) => {
+    console.log(req.body);
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -20,6 +20,7 @@ router.post('/', async (req, res) => {
         surname: req.body.surname,
         password: req.body.password
     });
+
     // password hashing 
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(user.password, salt);
