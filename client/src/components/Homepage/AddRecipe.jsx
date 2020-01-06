@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Input } from 'semantic-ui-react';
+import { Form, Input, Button } from 'semantic-ui-react';
 
 class AddRecipe extends Component {
     render() {
@@ -19,6 +19,12 @@ class AddRecipe extends Component {
             placeholder='Wpisz składnik'
           />
         </Form.Group>
+
+        <Form.Field
+            id='form-button-control-public'
+            control={Button}
+            content='Dodaj'
+        />
         </Form>
         )
     }
