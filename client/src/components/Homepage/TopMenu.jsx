@@ -3,7 +3,6 @@ import { Menu, Icon } from 'semantic-ui-react';
 
 class TopMenu extends Component {
 render() {
-
     return (
       <div>
         <Menu attached='top'>
