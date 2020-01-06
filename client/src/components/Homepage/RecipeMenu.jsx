@@ -5,16 +5,16 @@ class RecipeMenu extends Component {
 render() {
     return (
         <Menu attached='top'>
-          <Menu.Item name="dodajPrzepis">
-            Dodaj przepis
+          <Menu.Item name="addRecipe">
+            Add
           </Menu.Item>
 
-          <Menu.Item name="zauktualizujPrzepis">
-            Zaktualizuj przepis
+          <Menu.Item name="updateRecipe">
+            Update
           </Menu.Item>
 
-          <Menu.Item name="usunPrzepis">
-              Usuń przepis
+          <Menu.Item name="deleteRecipe">
+              Delete
           </Menu.Item>
         </Menu>
     )

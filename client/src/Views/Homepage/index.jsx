@@ -9,10 +9,10 @@ const Home = () => {
       <main>
         <p>
           <br></br>
-          <Header as='h2'>PRZEPISY</Header>
+          <Header as='h2'>RECIPES</Header>
           <RecipeMenu></RecipeMenu>
           <br></br>
-          <Header as='h3'>Dodaj przepis</Header>
+          <Header as='h3'>Add new recipe</Header>
           <AddRecipe></AddRecipe>
        </p>
       </main>

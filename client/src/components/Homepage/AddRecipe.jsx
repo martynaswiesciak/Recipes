@@ -7,23 +7,26 @@ class AddRecipe extends Component {
         <Form>
         <Form.Group widths='equal'>
           <Form.Input 
-            fluid label = 'Tytuł przepisu' 
-            placeholder = 'Wpisz tytuł'
+            fluid label = 'Recipe title' 
+            placeholder = 'Enter title'
+            required
           />
           <Form.Input 
-            fluid label='Opis' 
-            placeholder='Opis'
+            fluid label='Description' 
+            placeholder='Description'
+            required
           />
           <Form.Input 
-            fluid label='Dodaj składnik' 
-            placeholder='Wpisz składnik'
+            fluid label='Add ingredient' 
+            placeholder='Enter Ingredient'
+            required
           />
         </Form.Group>
 
         <Form.Field
             id='form-button-control-public'
             control={Button}
-            content='Dodaj'
+            content='Submit'
         />
         </Form>
         )
