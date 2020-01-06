@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Icon } from 'semantic-ui-react';
+import { Menu, Icon, Dropdown } from 'semantic-ui-react';
 
 class TopMenu extends Component {
 render() {
@@ -25,10 +25,15 @@ render() {
           name="register">
               Rejestracja
           </Menu.Item>
-          <Menu.Item
-          name="recipes">
-              Przepisy
-          </Menu.Item>
+
+          <Dropdown item text='Recipes'>
+          <Dropdown.Menu>
+            <Dropdown.Item>Add recipe</Dropdown.Item>
+            <Dropdown.Item>Update recipe</Dropdown.Item>
+            <Dropdown.Item>Delete recipe</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        
         </Menu>
       </div>
     )
