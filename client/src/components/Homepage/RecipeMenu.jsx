@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Menu, Icon } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 
 class RecipeMenu extends Component {
 render() {
     return (
-      <div>
         <Menu attached='top'>
           <Menu.Item name="dodajPrzepis">
             Dodaj przepis
@@ -18,7 +17,6 @@ render() {
               Usuń przepis
           </Menu.Item>
         </Menu>
-      </div>
     )
   }
 }
