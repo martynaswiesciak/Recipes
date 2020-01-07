@@ -3,9 +3,21 @@ import { Input, Button, Form } from 'semantic-ui-react';
 
 class Login extends Component {
   state = { nickname: '', password: '', confirmPassword: '', firstName: '', lastName: '', email: '' };
+  passwordCheckValue = null;
+
+  passwordCheck() {
+    const { password, confirmPassword} = this.state;
+    
+    if(password !== confirmPassword) {
+      this.passwordCheckValue = "password don't match!";
+    } else {
+      this.passwordCheckValue = null;
+    }
+  }
 
   render() {
     console.log(this.state);
+    this.passwordCheck();
       return (
         <Form>
           <Form.Group widths='equal'>
@@ -28,6 +40,7 @@ class Login extends Component {
               value={this.state.password}
               onChange={e => {this.setState({ password: e.target.value })}}
               required 
+              error={this.passwordCheckValue}
             />
             <Form.Input 
               icon="lock"
@@ -38,6 +51,7 @@ class Login extends Component {
               value={this.state.confirmPassword}
               onChange={e => {this.setState({ confirmPassword: e.target.value })}}
               required 
+              error={this.passwordCheckValue}
             />
           </Form.Group>
 
