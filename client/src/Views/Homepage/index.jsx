@@ -13,9 +13,6 @@ class Home extends Component {
   render(){
       return (
         <Segment.Group>
-          <Segment>
-            <TopMenu></TopMenu>
-          </Segment>
       
           <Segment>
             <main>

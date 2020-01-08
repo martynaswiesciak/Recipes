@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 
 class TopMenu extends Component {
 render() {
@@ -7,28 +8,37 @@ render() {
     return (
       <div>
         <Menu attached='top'>
-          <Menu.Item
-            name="plan">
-            Plan
-          </Menu.Item>
 
-          <Menu.Item
-            name="profile">
-            Profil 
-          </Menu.Item>
+          <Link to='/plan' className='item'>
+            <Menu.Item name="plan">
+              Plan
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item
-          name="login">
+          <Link to='/profile' className='item'>
+            <Menu.Item name="profile">
+              Profil 
+            </Menu.Item>
+          </Link>
+
+          <Link to='/login' className='item'>
+            <Menu.Item name="login">
               Logowanie
-          </Menu.Item>
-          <Menu.Item
-          name="register">
-              Rejestracja
-          </Menu.Item>
-          <Menu.Item
-          name="recipes">
-              Przepisy
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
+
+          <Link to='/register' className='item'>
+            <Menu.Item name="register">
+                Rejestracja
+            </Menu.Item>
+          </Link>
+
+          <Link to='/recipes' className='item'>
+            <Menu.Item name="recipes">
+                Przepisy
+            </Menu.Item>
+          </Link>
+
         </Menu>
       </div>
     )
