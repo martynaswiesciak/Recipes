@@ -13,8 +13,8 @@ const config = {
     protocol: getByMode(process.env.DB_PROT, process.env.DB_PROT_DEV),
   };
 
-const mongoUrl = `${config.protocol}://${config.username}:${config.password}@${config.host}:${config.port}/${config.name}`;
-
+//const mongoUrl = `${config.protocol}://${config.username}:${config.password}@${config.host}:${config.port}/${config.name}`;
+const mongoUrl = `mongodb://pbocian:xxx12345@recipes-sandbox-shard-00-01-rn7eo.mongodb.net:27017,recipes-sandbox-shard-00-00-rn7eo.mongodb.net:27017,recipes-sandbox-shard-00-02-rn7eo.mongodb.net:27017/test?authSource=admin&replicaSet=Recipes-sandbox-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true`
 const connectionOnSuccessHandler = connection => {
     console.log(`[MongoDB] Connection to ${mongoUrl} created`);
     return connection;
