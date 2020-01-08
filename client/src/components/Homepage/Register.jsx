@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Input, Button, Form } from 'semantic-ui-react';
 
-class Login extends Component {
+class Register extends Component {
   state = { nickname: '', password: '', confirmPassword: '', firstName: '', lastName: '', email: '' };
   passwordCheckValue = null;
 
@@ -92,4 +92,4 @@ class Login extends Component {
     }
   }
 
-export default Login;
+export default Register;
