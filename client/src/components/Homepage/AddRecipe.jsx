@@ -38,6 +38,7 @@ class AddRecipe extends Component {
             id='form-button-control-public'
             control={Button}
             content='Submit'
+            onClick={() => this.setState({ recipeTitle: '', description: '', addIngredient: ''})}
         />
         </Form>
         )
