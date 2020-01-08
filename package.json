@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "dotenv": "^8.2.0",
+    "joi": "^14.3.1",
+    "mongoose": "^4.13.20",
     "semantic-ui-react": "^0.88.2"
   }
 }
