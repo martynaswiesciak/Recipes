@@ -13,6 +13,8 @@ class DeleteRecipe extends Component {
           <Form.Input 
             fluid label = 'Recipe title' 
             placeholder = 'Enter title'
+            icon="bars"
+            iconPosition="left"
             value = {this.state.recipeTitle}
             onChange={e => {this.setState({ recipeTitle: e.target.value })}}
             required
@@ -21,6 +23,8 @@ class DeleteRecipe extends Component {
 
         <Form.Field
             id='form-button-control-public'
+            icon="minus"
+            iconPosition="left"
             control={Button}
             content='Delete'
             onClick={() => this.setState({ recipeTitle: ''})}

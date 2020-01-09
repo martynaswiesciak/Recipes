@@ -17,23 +17,23 @@ render() {
 
           <Link to='/profile' className='item'>
             <Menu.Item name="profile">
-              Profil 
+              Profile
             </Menu.Item>
           </Link>
 
           <Link to='/login' className='item'>
             <Menu.Item name="login">
-              Logowanie
+              Log in
             </Menu.Item>
           </Link>
 
           <Link to='/register' className='item'>
             <Menu.Item name="register">
-                Rejestracja
+                Register
             </Menu.Item>
           </Link>
 
-          <Dropdown item text='Przepisy' name='recipes'>
+          <Dropdown item text='Your Recipes' name='recipes'>
           <Dropdown.Menu>
             <Link to='/addRecipe' className='item'>
             <Dropdown.Item name='addRecipe'>Add recipe</Dropdown.Item>
