@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
-const dotenv = require('dotenv').config()
+const dotenv = require('dotenv').config({path:__dirname+'/./../../.env'});
 
-const getByMode = (prod, dev) => (process.env.TEST_ENV || process.env.NODE_ENV ? dev : prod);
+const getByMode = (prod, dev) => (prod);
 
 const config = {
     host: getByMode(process.env.DB_HOST, process.env.DB_HOST_DEV),
@@ -13,8 +13,8 @@ const config = {
     protocol: getByMode(process.env.DB_PROT, process.env.DB_PROT_DEV),
   };
 
-//const mongoUrl = `${config.protocol}://${config.username}:${config.password}@${config.host}:${config.port}/${config.name}`;
-const mongoUrl = `mongodb://pbocian:xxx12345@recipes-sandbox-shard-00-01-rn7eo.mongodb.net:27017,recipes-sandbox-shard-00-00-rn7eo.mongodb.net:27017,recipes-sandbox-shard-00-02-rn7eo.mongodb.net:27017/test?authSource=admin&replicaSet=Recipes-sandbox-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true`
+const mongoUrl = `${config.protocol}://${config.username}:${config.password}@${config.host}:${config.port}/${config.name}`;
+
 const connectionOnSuccessHandler = connection => {
     console.log(`[MongoDB] Connection to ${mongoUrl} created`);
     return connection;
@@ -36,4 +36,4 @@ const connectionOnSuccessHandler = connection => {
 
 console.log(mongoUrl);
 
-  module.exports = connect;
+module.exports = connect;
