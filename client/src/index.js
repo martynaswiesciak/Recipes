@@ -8,6 +8,8 @@ import { Button } from 'semantic-ui-react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { TopMenu } from './components/Homepage';
 import AddRecipe from './components/Recipes/AddRecipe';
+import UpdateRecipe from './components/Recipes/UpdateRecipe';
+import DeleteRecipe from './components/Recipes/DeleteRecipe';
 
 const App = () => {
     return (
@@ -19,7 +21,9 @@ const App = () => {
             <Route path='/profile' exact component={Home}/>
             <Route path='/login' exact component={Home}/>
             <Route path='/register' exact component={Register}/>
-            <Route path='/recipes' exact component={AddRecipe}/>
+            <Route path='/addRecipe' exact component={AddRecipe}/>
+            <Route path='/updateRecipe' exact component={UpdateRecipe}/>
+            <Route path='/deleteRecipe' exact component={DeleteRecipe}/>
           </div>
         
         </BrowserRouter>

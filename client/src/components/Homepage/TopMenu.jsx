@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Icon } from 'semantic-ui-react';
+import { Menu, Icon, Dropdown } from 'semantic-ui-react';
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 
 class TopMenu extends Component {
@@ -33,11 +33,19 @@ render() {
             </Menu.Item>
           </Link>
 
-          <Link to='/recipes' className='item'>
-            <Menu.Item name="recipes">
-                Przepisy
-            </Menu.Item>
-          </Link>
+          <Dropdown item text='Przepisy' name='recipes'>
+          <Dropdown.Menu>
+            <Link to='/addRecipe' className='item'>
+            <Dropdown.Item name='addRecipe'>Add recipe</Dropdown.Item>
+            </Link>
+            <Link to='/updateRecipe' className='item'>
+            <Dropdown.Item name='updateRecipe'>Update recipe</Dropdown.Item>
+            </Link>
+            <Link to='/deleteRecipe' className='item'>
+            <Dropdown.Item name='deleteRecipe'>Delete recipe</Dropdown.Item>
+            </Link>
+          </Dropdown.Menu>
+        </Dropdown>
 
         </Menu>
       </div>
